@@ -298,58 +298,61 @@ select:-webkit-autofill:focus {
 }
 .btn {
 	display: inline-block;
-	font-size: 12px;
-	line-height: 14px;
-	padding: 9px 8px;
+	font-size: 16px;
+	line-height: 18px;
+	padding: 15px 14px;
+	border-radius: 12px;
 	color: $whiteColor;
 	border: none;
 	text-align: center;
 	width: auto;
 	font-weight: 700;
 	text-decoration:none;
-	border-radius: 8px;
 	box-sizing: border-box;
 	background: $primaryBg;
 	transition: background 0.3s ease;
-}
-.btn:hover{
-	background: $primaryHoverBg;
-}
-.btn:focus{
-	background: $primaryActiveBg;
+	&:hover {
+		background: $primaryHoverBg;
+	}
+	&:focus {
+		background: $primaryActiveBg;
+	}
 }
 .btn-secondary{
 	background: $secondaryBg;
-}
-.btn-secondary:hover{
-	background: $secondaryHoverBg;
-}
-.btn-secondary:focus{
-	background: $secondaryActiveBg;
+
+	&:hover {
+		background: $secondaryHoverBg;
+	}
+	&:focus {
+		background: $secondaryActiveBg;
+	}
 }
 .btn-bordered {
 	background: none !important;
 	color: $whiteBg;
 	border: 2px solid currentColor;
-	padding: 7px 8px;
-}
-.btn-bordered:hover{
-	color: $whiteHoverBg;
-}
-.btn-bordered:focus{
-	color: $whiteActiveBg;
+	padding: 13px 14px;
+
+	&:hover {
+		background: $whiteHoverBg;
+	}
+	&:focus {
+		background: $whiteActiveBg;
+	}
 }
 .btn-bordered-primary {
 	background: none !important;
 	color: $primaryBg;
 	border: 2px solid currentColor;
-	padding: 7px 8px;
-}
-.btn-bordered-primary:hover{
-	color: $primaryHoverBg;
-}
-.btn-bordered-primary:focus{
-	color: $primaryActiveBg;
+	padding: 13px 14px;
+
+	&:hover {
+		background: $primaryHoverBg;
+	}
+	&:focus {
+		background: $primaryActiveBg;
+	}
 }
 /* wrapper */
 #wrapper {
@@ -377,14 +380,5 @@ select:-webkit-autofill:focus {
 }
 
 @media (min-width: 768px){
-	.btn{
-		font-size: 16px;
-		line-height: 18px;
-		padding: 15px 14px;
-		border-radius: 12px;
-	}
-	.btn-bordered,
-	.btn-bordered-primary{
-		padding: 13px 14px;
-	}
+
 }

@@ -40,47 +40,50 @@
     height: 18px;
     text-indent:-99999px;
     cursor: pointer;
+
+    > span {
+        position:absolute;
+        left:0;
+        height:3px;
+        width:100%;
+        background: $mainColor;
+    }
+    .t {
+        top: 0;
+        transform: rotate(0deg);
+        transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0s, top 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.3s;
+    }
+    .c {
+        top: 7px;
+        transition: opacity .2s ease-in-out;
+    }
+    .b {
+        top: 14px;
+        transform: rotate(0deg);
+        transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0s, top 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.3s, width 0.2s ease;
+    }
 }
-.toogle-menu > span {
-    position:absolute;
-    left:0;
-    height:3px;
-    width:100%;
-    background: $mainColor;
-}
-.toogle-menu .t {
-    top: 0;
-    transform: rotate(0deg);
-    transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0s, top 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.3s;
-}
-.open-nav .toogle-menu > span{
-    background: $greyMiddleColor;
-}
-.open-nav .toogle-menu .t{
-    top: 5px;
-    transform: rotate(45deg);
-    transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.3s, top 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0s;
-}
-.toogle-menu .c {
-    top: 7px;
-    transition: opacity .2s ease-in-out;
-}
-.open-nav .toogle-menu .c{
-    opacity:0;
-}
-.toogle-menu .b {
-    top: 14px;
-    transform: rotate(0deg);
-    transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0s, top 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.3s, width 0.2s ease;
-}
-.toogle-menu:hover .b {
-    width: 100%;
-}
-.open-nav .toogle-menu .b{
-    top: 5px;
-    width: 100%;
-    transform: rotate(135deg);
-    transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.3s, top 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0s;
+.open-nav{
+    .toogle-menu{
+
+        > span{
+            background: $greyMiddleColor;
+        }
+        .t{
+            top: 5px;
+            transform: rotate(45deg);
+            transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.3s, top 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0s;
+        }
+        .c{
+            opacity:0;
+        }
+        .b{
+            top: 5px;
+            width: 100%;
+            transform: rotate(135deg);
+            transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.3s, top 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0s;
+        }
+    }
 }
 .nav-holder{
     position: fixed;
@@ -99,20 +102,32 @@
     visibility: hidden;
     min-width: 320px;
     transition: all .2s ease-in-out;
+
+    #nav{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 .open-nav .nav-holder{
     opacity: 1;
     visibility: visible;
 }
-.nav-holder #nav{
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-}
 .menu{
     display: flex;
     flex-direction: column;
+
+    li{
+        text-align: center;
+        padding: 20px 0;
+
+        a{
+            font-size: 23px;
+            line-height: 1.17;
+            color: $mainColor;
+        }
+    }
 }
 @media (min-width: 768px){
     .logo{
