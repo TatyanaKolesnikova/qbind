@@ -80,7 +80,7 @@
             background: $greyMiddleColor;
         }
         .t{
-            top: 5px;
+            top: 6px;
             transform: rotate(45deg);
             transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.3s, top 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0s;
         }
@@ -88,7 +88,7 @@
             opacity:0;
         }
         .b{
-            top: 5px;
+            top: 6px;
             width: 100%;
             transform: rotate(135deg);
             transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.3s, top 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0s;
@@ -134,14 +134,16 @@
 .menu{
     display: flex;
     flex-direction: column;
+    margin: 0 0 20px;
 
     li{
         text-align: center;
-        padding: 20px 0;
+        padding: 22px 0;
 
         a{
             font-size: 23px;
             line-height: 1.17;
+            font-size: 500;
             color: $mainColor;
             text-decoration: none;
             display: inline-block;
