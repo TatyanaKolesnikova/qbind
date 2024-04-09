@@ -3,11 +3,12 @@
     padding: 14px 0;
     background-color: $lightBg;
     box-shadow: 0px 1.13px 10px 0px rgba(0, 0, 0, 0.035);
-}
-#header .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 .logo{
     display: block;
@@ -109,11 +110,12 @@
         flex-direction: column;
         justify-content: center;
     }
+    .open-nav &{
+        opacity: 1;
+        visibility: visible;
+    }
 }
-.open-nav .nav-holder{
-    opacity: 1;
-    visibility: visible;
-}
+
 .menu{
     display: flex;
     flex-direction: column;

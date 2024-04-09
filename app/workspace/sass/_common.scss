@@ -311,6 +311,7 @@ select:-webkit-autofill:focus {
 	box-sizing: border-box;
 	background: $primaryBg;
 	transition: background 0.3s ease;
+	
 	&:hover {
 		background: $primaryHoverBg;
 	}
