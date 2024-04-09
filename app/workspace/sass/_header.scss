@@ -14,16 +14,18 @@
     width: 96px;
     height: 29px;
     margin: 0 10px 0 0;
-}
-.logo a{
-    display: block;
-}
-.logo img {
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-}
+    
+    a{
+        display: block;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+} 
 .header-btn__mobile{
     display: inline-flex;
 }
