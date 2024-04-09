@@ -102,20 +102,32 @@
     visibility: hidden;
     min-width: 320px;
     transition: all .2s ease-in-out;
+
+    #nav{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 .open-nav .nav-holder{
     opacity: 1;
     visibility: visible;
 }
-.nav-holder #nav{
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-}
 .menu{
     display: flex;
     flex-direction: column;
+
+    li{
+        text-align: center;
+        padding: 20px 0;
+
+        a{
+            font-size: 23px;
+            line-height: 1.17;
+            color: $mainColor;
+        }
+    }
 }
 @media (min-width: 768px){
     .logo{
