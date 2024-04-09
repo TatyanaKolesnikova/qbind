@@ -1,4 +1,10 @@
 /* START GENERAL CSS */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
 html,body {
 	height: 100%;
 	margin: 0;
@@ -291,13 +297,14 @@ select:-webkit-autofill:focus {
 	transition: background-color 5000s ease-in-out 0s;
 }
 .btn {
+	display: inline-block;
 	font-size: 12px;
 	line-height: 14px;
 	padding: 9px 8px;
 	color: $whiteColor;
 	border: none;
 	text-align: center;
-	width: 100%;
+	width: auto;
 	font-weight: 700;
 	text-decoration:none;
 	border-radius: 8px;
@@ -324,6 +331,7 @@ select:-webkit-autofill:focus {
 	background: none !important;
 	color: $whiteBg;
 	border: 2px solid currentColor;
+	padding: 7px 8px;
 }
 .btn-bordered:hover{
 	color: $whiteHoverBg;
@@ -335,6 +343,7 @@ select:-webkit-autofill:focus {
 	background: none !important;
 	color: $primaryBg;
 	border: 2px solid currentColor;
+	padding: 7px 8px;
 }
 .btn-bordered-primary:hover{
 	color: $primaryHoverBg;
@@ -373,5 +382,9 @@ select:-webkit-autofill:focus {
 		line-height: 18px;
 		padding: 15px 14px;
 		border-radius: 12px;
+	}
+	.btn-bordered,
+	.btn-bordered-primary{
+		padding: 13px 14px;
 	}
 }

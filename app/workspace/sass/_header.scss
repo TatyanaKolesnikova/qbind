@@ -4,6 +4,30 @@
     background-color: $lightBg;
     box-shadow: 0px 1.13px 10px 0px rgba(0, 0, 0, 0.035);
 }
+#header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    display: block;
+    width: 96px;
+    height: 29px;
+    margin: 0 10px 0 0;
+}
+.logo a{
+    display: block;
+}
+.logo img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+.header-btn__mobile{
+    display: inline-flex;
+}
+
 .toogle-menu {
     display: block;
     position:absolute;
@@ -53,4 +77,13 @@
     width: 100%;
     transform: rotate(135deg);
     transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.3s, top 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0s;
+}
+@media (min-width: 768px){
+    .logo{
+        width: 167px;
+        height: 51px;
+    }
+    .header-btn__mobile{
+        display: none;
+    }
 }
