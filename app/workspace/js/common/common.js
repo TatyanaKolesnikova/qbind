@@ -3,6 +3,7 @@ $(document).ready(function () {
         $("body").toggleClass("open-nav");
         return false;
     });
+    
 });
 $(window).scroll(function() {
     if ($(this).scrollTop() > 1){
