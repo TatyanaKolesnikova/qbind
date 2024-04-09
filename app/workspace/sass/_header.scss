@@ -27,7 +27,6 @@
 .header-btn__mobile{
     display: inline-flex;
 }
-
 .toogle-menu {
     display: block;
     position:absolute;
@@ -51,6 +50,9 @@
     top: 0;
     transform: rotate(0deg);
     transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0s, top 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.3s;
+}
+.open-nav .toogle-menu > span{
+    background: $greyMiddleColor;
 }
 .open-nav .toogle-menu .t{
     top: 5px;
@@ -77,6 +79,38 @@
     width: 100%;
     transform: rotate(135deg);
     transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.3s, top 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0s;
+}
+.nav-holder{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 60px 0;
+    background: $lightBg;
+    z-index: 100;
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    min-width: 320px;
+    transition: all .2s ease-in-out;
+}
+.open-nav .nav-holder{
+    opacity: 1;
+    visibility: visible;
+}
+.nav-holder #nav{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
 }
 @media (min-width: 768px){
     .logo{
