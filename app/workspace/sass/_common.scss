@@ -137,88 +137,88 @@ input[type="password"]{
 
 	}
 	&::placeholder {
-		color: $dark;
+		color: $mainColor;
 		opacity: 1; /* Firefox */
 	}
 	&:-ms-input-placeholder { /* Internet Explorer 10-11 */
-		color:$dark;
+		color:$mainColor;
 	}
 	&::-ms-input-placeholder { /* Microsoft Edge */
-		color: $dark;
+		color: $mainColor;
 	}
 
 	&.focused {
-		color: $dark;
-		background: $dark;
+		color: $mainColor;
+		background: $mainColor;
 
 		&::placeholder {
-			color: $dark;
+			color: $mainColor;
 			opacity: 1;
 		}
 		&:-ms-input-placeholder {
-			color: $dark;
+			color: $mainColor;
 		}
 		&::-ms-input-placeholder {
-			color: $dark;
+			color: $mainColor;
 		}
 	}
 	&.filled {
-		color:$dark ;
+		color:$mainColor ;
 
 		&::placeholder {
-			color: $dark;
+			color: $mainColor;
 			opacity: 1;
 		}
 		&:-ms-input-placeholder {
-			color:$dark ;
+			color:$mainColor ;
 		}
 		&::-ms-input-placeholder {
-			color: $dark;
+			color: $mainColor;
 		}
 	}
 	&.valid {
-		color:$dark ;
-		background:$dark;
+		color:$mainColor ;
+		background:$mainColor;
 
 		&::placeholder {
-			color: $dark;
+			color: $mainColor;
 			opacity: 1;
 		}
 		&:-ms-input-placeholder {
-			color: $dark;
+			color: $mainColor;
 		}
 		&::-ms-input-placeholder {
-			color: $dark;
+			color: $mainColor;
 		}
 	}
 	&.novalid {
-		color: $dark;
-		background: $dark;
+		color: $mainColor;
+		background: $mainColor;
 
 		&::placeholder {
-			color: $dark;
+			color: $mainColor;
 			opacity: 1;
 		}
 		&:-ms-input-placeholder {
-			color:  $dark;
+			color:  $mainColor;
 		}
 		&::-ms-input-placeholder {
-			color:  $dark;
+			color:  $mainColor;
 		}
 	}
 	&.readonly {
-		color: $dark;
-		background: $dark;
+		color: $mainColor;
+		background: $mainColor;
 
 		&::placeholder {
-			color: $dark;
+			color: $mainColor;
 			opacity: 1;
 		}
 		&:-ms-input-placeholder {
-			color: $dark;
+			color: $mainColor;
 		}
 		&::-ms-input-placeholder {
-			color: $dark;
+			color: $mainColor;
 		}
 	}
 }
@@ -250,7 +250,7 @@ form {
 	input[type="button"],
 	button {
 		border: none;
-		background: $dark;
+		background: $mainColor;
 		text-align: center;
 		width: 100%;
 		font-weight: bold;
@@ -268,8 +268,8 @@ form {
 
 	input[readonly],
 	button[readonly] {
-		color:$dark  !important;
-		background: $dark!important;
+		color:$mainColor  !important;
+		background: $mainColor!important;
 		border: none !important;
 	}
 
@@ -286,20 +286,62 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-	-webkit-text-fill-color: $dark;
+	-webkit-text-fill-color: $mainColor;
 	-webkit-box-shadow: 0 0 0 1000px #fbfcfb inset;
 	transition: background-color 5000s ease-in-out 0s;
 }
 .btn {
-	padding:17px 20px 18px;
+	font-size: 12px;
+	line-height: 14px;
+	padding: 9px 8px;
+	color: $whiteColor;
 	border: none;
 	text-align: center;
 	width: 100%;
-	font-weight: 500;
+	font-weight: 700;
 	text-decoration:none;
+	border-radius: 8px;
 	box-sizing: border-box;
+	background: $primaryBg;
+	transition: background 0.3s ease;
 }
-
+.btn:hover{
+	background: $primaryHoverBg;
+}
+.btn:focus{
+	background: $primaryActiveBg;
+}
+.btn-secondary{
+	background: $secondaryBg;
+}
+.btn-secondary:hover{
+	background: $secondaryHoverBg;
+}
+.btn-secondary:focus{
+	background: $secondaryActiveBg;
+}
+.btn-bordered {
+	background: none !important;
+	color: $whiteBg;
+	border: 2px solid currentColor;
+}
+.btn-bordered:hover{
+	color: $whiteHoverBg;
+}
+.btn-bordered:focus{
+	color: $whiteActiveBg;
+}
+.btn-bordered-primary {
+	background: none !important;
+	color: $primaryBg;
+	border: 2px solid currentColor;
+}
+.btn-bordered-primary:hover{
+	color: $primaryHoverBg;
+}
+.btn-bordered-primary:focus{
+	color: $primaryActiveBg;
+}
 /* wrapper */
 #wrapper {
 	overflow:hidden;
@@ -317,11 +359,19 @@ select:-webkit-autofill:focus {
 .container {
 	position: relative;
 	width: 100%;
-	max-width: 1202px;
+	max-width: 1210px;
 	margin: 0 auto;
-	padding: 0 10px;
+	padding: 0 20px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
+@media (min-width: 768px){
+	.btn{
+		font-size: 16px;
+		line-height: 18px;
+		padding: 15px 14px;
+		border-radius: 12px;
+	}
+}

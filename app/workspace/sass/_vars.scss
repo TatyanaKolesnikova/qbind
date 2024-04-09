@@ -1,15 +1,32 @@
 /* common project variables */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
 /* font variables */
-$gff:  sans-serif;
-$gfs: 18px;
+$gff: "DM Sans", sans-serif;
+$gfs: 16px;
 $glh: 21px;
 
 
-
-
 /* color variables */
-$dark: #000;
+$mainColor: #080A13;
+$blueColor: #1457FF;
+$greenColor: #00CC85;
+$greyColor: #00CC85;
+$whiteColor: #fff;
+
+/* bg color variables */
+$whiteBg: #FFFFFF;
+$greyBg: #F3F3F3;
+$lightBg: #F9FAFF;
+$primaryBg: #1457ff;
+$primaryHoverBg: #154cd5;
+$primaryActiveBg: #002b95;
+$secondaryBg: #00cc85;
+$secondaryHoverBg: #00b979;
+$secondaryActiveBg: #00a46b;
+$whiteHoverBg: #efefef;
+$whiteActiveBg: #d0d0d0;
+
 
 /* border-radius variables */
 
