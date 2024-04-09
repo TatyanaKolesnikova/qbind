@@ -1,0 +1,327 @@
+/* START GENERAL CSS */
+html,body {
+	height: 100%;
+	margin: 0;
+}
+body {
+	font: #{$gfs}/#{$glh} $gff; //$gfs/$glh $gff;
+	margin: 0;
+	min-width: 320px;
+}
+/* General reset */
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+/* General reset jcf */
+form, fieldset {
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+input,
+select,
+textarea,
+select,
+button {
+	vertical-align: middle;
+	font: #{$gfs}/#{$glh} $gff;
+}
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+label,
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+/* General reset html 5 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {display:block;}
+figure{margin:0;}
+/* General reset */
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+a {
+	text-decoration: underline;
+
+	&:hover {text-decoration: none;}
+	&:focus, &:hover {
+	 outline: none;
+	 outline: 0;
+	}
+}
+
+p {
+  margin:0 0 18px;
+}
+
+.hold-img,
+.hold-icon {
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.form-holder {
+	width: 100%;
+	//margin: 0 0 20px;
+}
+input[type="tel"],
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+	width:100%;
+	height:40px;
+	padding:5px 10px 5px;
+	margin:0;
+	outline: none;
+	outline: 0;
+	box-sizing: border-box;
+	border: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	-webkit-transition: color $timeHover ease-in-out;
+	-moz-transition: color $timeHover ease-in-out;
+	-ms-transition: color $timeHover ease-in-out;
+	transition: color $timeHover ease-in-out;
+	position: relative;
+	font-size: $gfs;
+	line-height: $gfs;
+	font-weight: bold;
+	text-align: center;
+	outline: none;
+	outline: 0;
+	overflow: hidden;
+
+	&:focus {
+
+	}
+	&::placeholder {
+		color: $dark;
+		opacity: 1; /* Firefox */
+	}
+	&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		color:$dark;
+	}
+	&::-ms-input-placeholder { /* Microsoft Edge */
+		color: $dark;
+	}
+
+	&.focused {
+		color: $dark;
+		background: $dark;
+
+		&::placeholder {
+			color: $dark;
+			opacity: 1;
+		}
+		&:-ms-input-placeholder {
+			color: $dark;
+		}
+		&::-ms-input-placeholder {
+			color: $dark;
+		}
+	}
+	&.filled {
+		color:$dark ;
+
+		&::placeholder {
+			color: $dark;
+			opacity: 1;
+		}
+		&:-ms-input-placeholder {
+			color:$dark ;
+		}
+		&::-ms-input-placeholder {
+			color: $dark;
+		}
+	}
+	&.valid {
+		color:$dark ;
+		background:$dark;
+
+		&::placeholder {
+			color: $dark;
+			opacity: 1;
+		}
+		&:-ms-input-placeholder {
+			color: $dark;
+		}
+		&::-ms-input-placeholder {
+			color: $dark;
+		}
+	}
+	&.novalid {
+		color: $dark;
+		background: $dark;
+
+		&::placeholder {
+			color: $dark;
+			opacity: 1;
+		}
+		&:-ms-input-placeholder {
+			color:  $dark;
+		}
+		&::-ms-input-placeholder {
+			color:  $dark;
+		}
+	}
+	&.readonly {
+		color: $dark;
+		background: $dark;
+
+		&::placeholder {
+			color: $dark;
+			opacity: 1;
+		}
+		&:-ms-input-placeholder {
+			color: $dark;
+		}
+		&::-ms-input-placeholder {
+			color: $dark;
+		}
+	}
+}
+
+form {
+	position:relative;
+	margin:0;
+	width:100%;
+
+	textarea {
+		overflow: auto;
+		vertical-align: top;
+		border-radius:6px;
+		border: 1px dashed #dcdcdc;
+		width:100%;
+		padding:20px;
+		margin:0 0 7px;
+		outline: none;
+		outline: 0;
+		min-height: 160px ;
+		max-width: 100% !important;
+		box-sizing: border-box;
+		box-shadow: none;
+		font-weight: 600;
+		-webkit-appearance: none;
+	}
+
+
+	input[type="button"],
+	button {
+		border: none;
+		background: $dark;
+		text-align: center;
+		width: 100%;
+		font-weight: bold;
+	}
+
+	label {
+		width: 100%;
+		display:block;
+		position: relative;
+
+		&:hover {
+			cursor: default;
+		}
+	}
+
+	input[readonly],
+	button[readonly] {
+		color:$dark  !important;
+		background: $dark!important;
+		border: none !important;
+	}
+
+	input:valid {
+
+	}
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	-webkit-text-fill-color: $dark;
+	-webkit-box-shadow: 0 0 0 1000px #fbfcfb inset;
+	transition: background-color 5000s ease-in-out 0s;
+}
+.btn {
+	padding:17px 20px 18px;
+	border: none;
+	text-align: center;
+	width: 100%;
+	font-weight: 500;
+	text-decoration:none;
+	box-sizing: border-box;
+}
+
+/* wrapper */
+#wrapper {
+	overflow:hidden;
+	width:100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	transition: all 0.2s ease;
+	position:relative;
+}
+.main {
+	flex: 1 1 auto;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	max-width: 1202px;
+	margin: 0 auto;
+	padding: 0 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+

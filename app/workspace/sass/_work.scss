@@ -1,0 +1,45 @@
+/* general classes */
+@mixin anim($anim: color, $time: .2s){
+	-webkit-transition: $anim $time ease-in-out;
+	-moz-transition: $anim $time ease-in-out;
+	transition: $anim $time ease-in-out;
+}
+@mixin borad($rad:10px){
+	-webkit-border-radius:$rad;
+	-moz-border-radius:$rad;
+	border-radius:$rad;
+}
+@mixin fsl($size, $height){
+	font-size:$size;
+	line-height:$height;
+}
+@mixin nul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+@mixin aft{
+	content:"";
+	display:block;
+	clear:both;
+}
+@mixin ti {
+	text-indent:-9999px;
+	overflow:hidden;
+}
+@mixin dib {
+	display:inline-block;
+	vertical-align:top;
+}
+@mixin multiple-transition($properties: all, $duration: 200ms, $method: ease, $delay: 0ms) {
+	$value: ();
+	@each $property in $properties {
+		@if length($value) > 0 {
+			$value: append($value, unquote(",") #{$property} $duration $method $delay);
+		}
+		@else {
+			$value: append($value, #{$property} $duration $method $delay);
+		}
+	}
+	transition: $value;
+}
