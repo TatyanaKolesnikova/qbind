@@ -1,9 +1,12 @@
 .section-hero{
     background: $lightBg;
     padding: 80px 0 20px;
+    
+
     &__image{
         max-width: 450px;
         margin: 0 auto 27px;
+        box-shadow: 50px 50px 0 0 rgba(231, 239, 255, 0.4);
 
         img{
             display: block;
