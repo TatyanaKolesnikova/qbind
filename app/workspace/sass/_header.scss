@@ -13,18 +13,15 @@
 }
 .logo{
     display: block;
+    flex: 0 0 96px;
     width: 96px;
     height: 29px;
     margin: 0 10px 0 0;
-    
-    a{
-        display: block;
-    }
 
     img {
-        max-width: 100%;
-        height: auto;
-        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
         display: block;
     }
 } 
@@ -164,6 +161,9 @@
         }
     }
 }
+.item-lang{
+    display: none;
+}
 .list-lang{
     margin-top: auto;
     display: flex;
@@ -187,21 +187,21 @@
 @media (min-width: 768px){
     #header{
         padding: 30px 20px;
-        
+
         .logo{
+            flex: 0 0 167px;
             width: 167px;
             height: 51px;
         }
     }
-    
     .header-btn__mobile{
         display: none;
     }
     .nav-holder{
         position: static;
         height: inherit;
-        padding: 0;
         opacity: 1;
+        padding: 0;
         visibility: visible;
         flex-direction: row;
         justify-content: flex-end;
@@ -222,7 +222,7 @@
     }
     .menu{
         flex-direction: row;
-        margin: 0 40px 0 0;
+        margin: 0 20px 0 0;
 
         li{
             padding: 0 10px;
@@ -235,7 +235,8 @@
     }
     .hold-lang{
         position: relative;
-        margin: 0 0 0 40px;
+        width: 48px;
+        margin: 0 0 0 20px;
 
         .item-lang{
             font-size: 14px;
@@ -243,7 +244,7 @@
             color: $greyDarkColor;
             text-transform: uppercase;
             display: block;
-            padding: 4px 28px 4px 4px;
+            padding: 4px 26px 4px 4px;
             text-decoration: none;
             position: relative;
 
@@ -255,7 +256,7 @@
                 border-bottom: 2px solid $greyMiddleColor;
                 position: absolute;
                 top: 50%;
-                right: 6px;
+                right: 8px;
                 transform: rotate(-45deg);
                 margin-top: -7px;
             }
@@ -302,7 +303,7 @@
                     transition: opacity 0.3s ease;
                 }
                 &:hover,
-                &.acvive{
+                &.active{
                     background-color: $blueMiddleColor;
 
                     &:before{
@@ -316,5 +317,13 @@
         .open-menu &{
             display: block;
         }
+    }
+}
+@media (min-width: 1024px){
+    .hold-lang{
+        margin: 0 0 0 40px;
+    }
+    .menu{
+        margin: 0 40px 0 0;
     }
 }
