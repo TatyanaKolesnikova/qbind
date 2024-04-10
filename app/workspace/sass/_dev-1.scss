@@ -1,0 +1,117 @@
+/*start .section-intro*/
+.section-intro {
+    background: $lightBg;
+    padding: 6.8vw 0 13vw;
+    &__row {
+       margin: 0 -13px; 
+    }
+    &__desc {
+        padding: 0 13px;
+        
+    }
+    &__media {
+        padding: 0 13px;
+        margin: 0 0 40px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .btn {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .section-intro {
+        &__row {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        &__desc {
+            width: 45%;
+        }
+        &__media {
+           flex: 1;
+        }
+        .btn {
+            width: auto;
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .section-intro {
+        &__desc {
+            padding-top: 65px;
+        }
+        h1 {
+            font-size: 48px;
+            margin: 0 0 40px;
+        }
+    }
+}
+@media (min-width: 1360px) {
+
+    .section-intro {
+        &__media {
+           margin: 0 -6vw 0 0; 
+        }
+    }
+}
+/*end .section-intro*/
+/*strat .section-case*/
+.section-case {
+    padding: 6.8vw 0;
+    text-align: center;
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -8px;
+    }
+}
+.case-item {
+    width: 50%;
+    padding: 0 8px;
+    margin: 0 0 28px;
+    text-align: left;
+    font-size: 13px;
+    &__image {
+        --ic-w: 68%;
+        padding-top: calc(var(--ic-w) * 0.78);
+        width: var(--ic-w);
+        position: relative;
+        margin: 0 auto 10px;
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__title {
+        display: block;
+        margin: 0 0 20px;
+    }
+}
+@media (min-width: 768px) {
+    .section-case {
+        &__row {
+            margin: 0 -15px 40px;
+        }
+    }
+    .case-item {
+        width: 25%;
+        padding: 0 15px;
+        font-size: 14px;
+    }
+}
+@media (min-width: 1024px) {
+    .case-item {
+        &__title {
+           font-size: 23px;
+        }
+    }
+}
+/*end .section-case*/

@@ -378,6 +378,7 @@ select:-webkit-autofill:focus {
 	flex-direction: column;
 	transition: all 0.2s ease;
 	position:relative;
+	padding: 60px 0 0;
 }
 .main {
 	flex: 1 1 auto;
@@ -437,6 +438,9 @@ select:-webkit-autofill:focus {
 	}
 }
 @media (min-width: 768px){
+	#wrapper {
+		padding: 111px 0 0;
+	}
 	h1{
 		font-size: 40px;
 		line-height: 1.15;
