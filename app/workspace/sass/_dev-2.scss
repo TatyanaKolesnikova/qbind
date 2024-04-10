@@ -1,5 +1,6 @@
 .section-hero{
     background: $lightBg;
+    padding: 80px 0 20px;
     &__image{
         max-width: 450px;
         margin: 0 auto 27px;
@@ -22,5 +23,13 @@
         display: block;
         text-align: center;
         margin: 0 auto 10px;
+    }
+    &__btn{
+        max-width: 320px;
+        margin: 0 auto 66px;
+
+        .btn{
+            width: 100%;
+        }
     }
 }
