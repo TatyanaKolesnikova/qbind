@@ -1,12 +1,12 @@
+/*start section-hero*/
 .section-hero{
-    background: $lightBg;
-    padding: 80px 0 20px;
+    padding: 140px 0 66px;
+    position: relative;
     
-
     &__image{
         max-width: 450px;
-        margin: 0 auto 27px;
-        box-shadow: 50px 50px 0 0 rgba(231, 239, 255, 0.4);
+        margin: 0 auto 8px;
+        box-shadow: 0 0 30px 0 rgba(231, 239, 255, 1);
 
         img{
             display: block;
@@ -25,14 +25,30 @@
         text-transform: uppercase;
         display: block;
         text-align: center;
-        margin: 0 auto 10px;
+        margin: 0 auto 11px;
     }
-    &__btn{
-        max-width: 320px;
-        margin: 0 auto 66px;
+}
+@media (min-width: 768px) {
+    .section-hero{
+        padding: 200px 0 86px;
 
-        .btn{
-            width: 100%;
+        .container{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &__image{
+            max-width: 703px;
+            box-shadow: 0 0 60px 0 rgba(231, 239, 255, 1);
+        }
+        &__desc{
+            max-width: 770px;
+            text-align: center;
+            margin: 0 auto 5px;
+        }
+        &__suptitle{
+            font-size: 13px;
+            margin: 0 0 20px;
         }
     }
 }
+/*send section-hero*/
