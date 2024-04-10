@@ -462,6 +462,7 @@ select:-webkit-autofill:focus {
 		&:after{
 			width: 14px;
 			height: 14px;
+			border-width: 3px;
 			bottom: 17px;
 		}
 	}
