@@ -396,6 +396,46 @@ select:-webkit-autofill:focus {
 .color{
 	color: $blueColor;
 }
+.scroll-down{
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	display: block;
+	position: relative;
+	background-color: $secondaryBg;
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	transition: background-color 0.3s ease;
+
+	&:before{
+		content: '';
+		width: 2px;
+		height: 14px;
+		background-color: $whiteBg;
+		position: absolute;
+		bottom: 12px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	&:after{
+		content: '';
+		width: 12px;
+		height: 12px;
+		border-left: 2px solid $whiteBg;
+		border-bottom: 2px solid $whiteBg;
+		position: absolute;
+		bottom: 12px;
+		left: 50%;
+		transform: translateX(-50%) rotate(-45deg);
+	}
+	&:hover{
+		background-color: $secondaryHoverBg;
+	}
+	&:focus{
+		background-color: $secondaryActiveBg;
+	}
+}
 @media (min-width: 768px){
 	h1{
 		font-size: 40px;
@@ -404,5 +444,21 @@ select:-webkit-autofill:focus {
 	h2,h3{
 		font-size: 40px;
 		line-height: 1.15;
+	}
+	.scroll-down{
+		width: 48px;
+		height: 48px;
+		bottom: 18px;
+		
+		&:before{
+			width: 3px;
+			height: 18px;
+			bottom: 17px;
+		}
+		&:after{
+			width: 14px;
+			height: 14px;
+			bottom: 17px;
+		}
 	}
 }
