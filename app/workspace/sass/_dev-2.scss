@@ -66,7 +66,8 @@
     &__title{
         text-align: center;
         font-size: 14px;
-        margin: 0 0 15px;
+        margin: 0 0 30px;
+        padding: 0 20px;
         
         p{
             margin: 0 0 15px;
@@ -76,19 +77,40 @@
         margin: 0 0 15px;
     }
 }
+.slider-paginator{
+    display: none;
+}
+.slider{
+    margin: 0 0 27px; 
+
+    .slick-track{
+        display: flex;
+    }
+    .slick-list{
+        padding: 0 28px !important;
+    }
+    .slick-slide{
+        float: none;
+        height: inherit;
+
+        &>div{
+            display: flex;
+            height: 100%;
+        }
+    }
+
+}
 .slide-item{
     padding: 16px;
     background: $lightBg;
     border-radius: 20px;
     margin: 0 6px;
-    float: none;
-    height: inherit;
-    min-width: 304px;
-    width: calc(100% - 12px);
+    width: calc(100% - 12px) !important;
+    height: 100%;
 
     &__image{
         width: 100%;
-        margin: 0 auto 28px;
+        margin: 0 auto 33px;
         border-radius: 5px;
         box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07);
 
@@ -111,6 +133,140 @@
         font-size: 14px;
         line-height: 1.4;
         margin: 0 0 50px;
+    }
+}
+.slider-nav{
+    display: flex;
+    justify-content: center;
+    padding: 0 30px;
+    position: relative;
+    flex-direction: row-reverse;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #a4a4a4;
+    max-width: 114px;
+    margin: 0 auto 40px;
+}
+.slick-dots{
+    position: relative;
+
+    li{
+        display: none;
+
+        &.slick-active{
+            display: block;
+        }
+
+        button{
+            border:none;
+            background-color: rgba(0,0,0,0);
+            padding: 0;
+            font-size: 16px;
+            line-height: 1.4;
+            font-weight: 500;
+            color: #424557;
+            vertical-align: top;
+        }
+    }
+}
+.slider-count{
+    display: inline-block;
+    
+}
+.slick-arrow{
+    width: 15px;
+    height: 15px;
+    border-left: 3px solid #d0d0d0;
+    border-bottom: 3px solid #d0d0d0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(45deg);
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+
+    &.right{
+        left: auto;
+        right: 0;
+        transform: translateY(-50%) rotate(-135deg);
+    }
+    &:hover{
+        border-color: #b3b3b3;
+    }
+}
+@media (min-width: 1024px) {
+    .slider-nav{
+        display: none;
+    }
+    .slider-hold{
+        display: flex;
+        max-width: 895px;
+        margin: 0 auto;
+        color: $greyColor;
+    }
+    .slider{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+
+        .slick-list{
+            padding: 0 !important;
+            width: 50%;
+        }
+        .slick-slide{
+            >div{
+                width: 100%;
+            }
+        }
+        .slick-dots{
+            width: 50%;
+
+            li{
+                display: block;
+                width: 100% !important;
+                max-width: 370px;
+                cursor: pointer;
+
+                .slick-slide{
+                    font-size: 16px;
+                    line-height: 1.25;
+                    width: 100% !important;
+                    opacity: 1 !important;
+                    left: 0 !important;
+                    padding: 15px 10px;
+                    border-radius: 10px;
+                    background: $lightBg;
+                    margin: 0 0 5px;  
+                }
+                &.slick-active{
+                    .slick-slide{
+                        background: $blueMiddleColor;
+                    }
+                }
+            }
+            
+        }
+    }
+    .slide-item{
+        padding: 0;
+        margin: 0;
+        background: rgba(0,0,0,0);
+        width: 100% !important;
+
+        &__image{
+            max-width: 382px;
+            margin: 0 auto 30px;
+        }
+        &__title{
+            font-size: 28px;
+            line-height: 1.3;
+            margin: 0 0 15px;
+        }
+        &__text{
+            font-size: 19px;
+            line-height: 1.3;
+        }
     }
 }
 /*end section-slider*/

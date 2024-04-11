@@ -17,27 +17,59 @@ $(document).ready(function () {
         $(this).addClass('active');
         $(this).parents('.hold-lang').removeClass("open-menu");
     });
-
-
-    $('.slider-hold-paginator').slick({
+    var dots = $('.slider-paginator .slick-slide');
+    $('.slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider'
-    });
-    $('.slider').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.slider-hold-paginator',
+        //asNavFor: '.slider-paginator',
         dots: true,
-        centerMode: true,
-        focusOnSelect: true,
-        appendDots: $('.slider-nav'),
+        customPaging: function(slider, i) {
+            return dots.eq(i);
+        },
+        
+        //appendDots: $('.slider-nav'),
         appendArrows: $('.slider-nav'),
-        prevArrow: '<span class="slick-arrow_custom-left"></span>',
-        nextArrow: '<span class="slick-arrow_custom-right"></span>',
+        prevArrow: '<span class="left"></span>',
+        nextArrow: '<span class="right"></span>',
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    infinite: true,
+                    centerMode: true,
+                    focusOnSelect: true,
+                    dots: true,
+                    appendDots: $('.slider-nav'),
+                    customPaging : function(slider, i) {
+                        return '<button type="button">' + (i+1) + '</button>';
+                    }
+                }
+            },
+            {
+              breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    infinite: true,
+                    centerMode: true,
+                    focusOnSelect: true,
+                }
+            },
+            {
+              breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    infinite: true,
+                    centerMode: true,
+                    focusOnSelect: true,
+                }
+            }
+          ]
     });
+
+    var count = $(".slider-nav ul li").length;
+    $('.slider-count').text('/'+count);
 });
 
 $(window).scroll(function() {
