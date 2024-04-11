@@ -37,7 +37,6 @@ $(document).ready(function () {
         appendArrows: $('.slider-nav'),
         prevArrow: '<span class="slick-arrow_custom-left"></span>',
         nextArrow: '<span class="slick-arrow_custom-right"></span>',
-        dotsClass: 'slick-custom-dots',
     });
 });
 
