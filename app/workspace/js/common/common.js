@@ -54,6 +54,11 @@ $(document).ready(function () {
                     infinite: true,
                     centerMode: true,
                     focusOnSelect: true,
+                    dots: true,
+                    appendDots: $('.slider-nav'),
+                    customPaging : function(slider, i) {
+                        return '<button type="button">' + (i+1) + '</button>';
+                    }
                 }
             },
             {
@@ -63,6 +68,11 @@ $(document).ready(function () {
                     infinite: true,
                     centerMode: true,
                     focusOnSelect: true,
+                    dots: true,
+                    appendDots: $('.slider-nav'),
+                    customPaging : function(slider, i) {
+                        return '<button type="button">' + (i+1) + '</button>';
+                    }
                 }
             }
           ]
