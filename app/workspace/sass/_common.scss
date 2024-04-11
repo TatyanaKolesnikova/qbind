@@ -324,7 +324,7 @@ select:-webkit-autofill:focus {
 	text-decoration:none;
 	box-sizing: border-box;
 	background: $primaryBg;
-	transition: background 0.3s ease;
+	transition: all 0.3s ease;
 
 	&:hover {
 		background: $primaryHoverBg;
@@ -350,10 +350,10 @@ select:-webkit-autofill:focus {
 	padding: 13px 14px;
 
 	&:hover {
-		background: $whiteHoverBg;
+		color: $whiteHoverBg;
 	}
 	&:focus {
-		background: $whiteActiveBg;
+		color: $whiteActiveBg;
 	}
 }
 .btn-bordered-primary {
@@ -363,10 +363,10 @@ select:-webkit-autofill:focus {
 	padding: 13px 14px;
 
 	&:hover {
-		background: $primaryHoverBg;
+		color: $primaryHoverBg;
 	}
 	&:focus {
-		background: $primaryActiveBg;
+		color: $primaryActiveBg;
 	}
 }
 /* wrapper */
