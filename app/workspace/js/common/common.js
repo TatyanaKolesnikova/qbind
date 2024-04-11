@@ -19,40 +19,26 @@ $(document).ready(function () {
     });
 
 
-    var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 10,
-        freeMode: true,
-        watchSlidesProgress: true,
-    });
-    var swiper2 = new Swiper(".mySwiper2", {
-        spaceBetween: 10,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            type: "fraction",
-        },
-        thumbs: {
-            swiper: swiper,
-        },
-    });
-    $('.slider').slick({
+    $('.slider-hold-paginator').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
         fade: true,
-        asNavFor: '.slider-hold-paginator'
-      });
-      $('.slider-hold-paginator').slick({
+        asNavFor: '.slider'
+    });
+    $('.slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        asNavFor: '.slider',
+        asNavFor: '.slider-hold-paginator',
         dots: true,
         centerMode: true,
-        focusOnSelect: true
-      });
+        focusOnSelect: true,
+        appendDots: $('.slider-nav'),
+        appendArrows: $('.slider-nav'),
+        prevArrow: '<span class="slick-arrow_custom-left"></span>',
+        nextArrow: '<span class="slick-arrow_custom-right"></span>',
+        dotsClass: 'slick-custom-dots',
+    });
 });
 
 $(window).scroll(function() {
