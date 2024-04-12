@@ -17,69 +17,70 @@ $(document).ready(function () {
         $(this).addClass('active');
         $(this).parents('.hold-lang').removeClass("open-menu");
     });
-    var dots = $('.slider-paginator .slick-slide');
-    $('.slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        //asNavFor: '.slider-paginator',
-        dots: true,
-        customPaging: function(slider, i) {
-            return dots.eq(i);
-        },
-        
-        //appendDots: $('.slider-nav'),
-        appendArrows: $('.slider-nav'),
-        prevArrow: '<span class="left"></span>',
-        nextArrow: '<span class="right"></span>',
-        infinite: false,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    infinite: true,
-                    centerMode: true,
-                    focusOnSelect: true,
-                    dots: true,
-                    appendDots: $('.slider-nav'),
-                    customPaging : function(slider, i) {
-                        return '<button type="button">' + (i+1) + '</button>';
-                    }
-                }
-            },
-            {
-              breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    infinite: true,
-                    centerMode: true,
-                    focusOnSelect: true,
-                    dots: true,
-                    appendDots: $('.slider-nav'),
-                    customPaging : function(slider, i) {
-                        return '<button type="button">' + (i+1) + '</button>';
-                    }
-                }
-            },
-            {
-              breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    infinite: true,
-                    centerMode: true,
-                    focusOnSelect: true,
-                    dots: true,
-                    appendDots: $('.slider-nav'),
-                    customPaging : function(slider, i) {
-                        return '<button type="button">' + (i+1) + '</button>';
-                    }
-                }
-            }
-          ]
-    });
 
-    var count = $(".slider-nav ul li").length;
-    $('.slider-count').text('/'+count);
+    $('.slider-hold').each(function () {
+        var dots = $(this).find('.slider-paginator .slick-slide');
+        $(this).find('.slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            customPaging: function(slider, i) {
+                return dots.eq(i);
+            },
+            appendArrows: $(this).find('.slider-nav'),
+            prevArrow: '<span class="left"></span>',
+            nextArrow: '<span class="right"></span>',
+            infinite: false,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        infinite: true,
+                        centerMode: true,
+                        focusOnSelect: true,
+                        dots: true,
+                        appendDots: $(this).find('.slider-nav'),
+                        customPaging : function(slider, i) {
+                            return '<button type="button">' + (i+1) + '</button>';
+                        }
+                    }
+                },
+                {
+                breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        infinite: true,
+                        centerMode: true,
+                        focusOnSelect: true,
+                        dots: true,
+                        appendDots: $(this).find('.slider-nav'),
+                        customPaging : function(slider, i) {
+                            return '<button type="button">' + (i+1) + '</button>';
+                        }
+                    }
+                },
+                {
+                breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        infinite: true,
+                        centerMode: true,
+                        focusOnSelect: true,
+                        dots: true,
+                        appendDots: $(this).find('.slider-nav'),
+                        customPaging : function(slider, i) {
+                            return '<button type="button">' + (i+1) + '</button>';
+                        }
+                    }
+                }
+            ]
+        });
+
+        var count = $(this).find(".slider-nav ul li").length;
+        $(this).find('.slider-count').text('/'+count);
+    })
+    Fancybox.bind("[data-fancybox]");
 });
 
 $(window).scroll(function() {

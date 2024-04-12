@@ -70,6 +70,7 @@
         padding: 0 20px;
         
         p{
+            font-size: 16px;
             margin: 0 0 15px;
         }
     }
@@ -196,6 +197,16 @@
     }
 }
 @media (min-width: 1024px) {
+    .section-slider{
+        padding: 100px 0 40px;
+        &__title{
+            margin: 0 0 73px;
+
+            p{
+                font-size: 19px;
+            }
+        }
+    }
     .slider-nav{
         display: none;
     }
@@ -230,14 +241,17 @@
 
                 .slick-slide{
                     font-size: 16px;
-                    line-height: 1.25;
+                    line-height: 1.6;
                     width: 100% !important;
                     opacity: 1 !important;
                     left: 0 !important;
-                    padding: 15px 10px;
+                    padding: 13px 10px;
                     border-radius: 10px;
                     background: $lightBg;
-                    margin: 0 0 5px;  
+                    margin: 0 0 5px; 
+                    display: inline-flex;
+                    justify-content: space-between;
+                    align-items: center; 
                 }
                 &.slick-active{
                     .slick-slide{
@@ -248,6 +262,18 @@
             
         }
     }
+    .slick-slide__mark{
+        font-size: 12px;
+        line-height: 1.25;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 5px 6px;
+        background: $whiteBg;
+        border-radius: 7px;
+        color: $blueDarkColor;
+        display: inline-block;
+        margin: 0 0 0 10px;
+    }
     .slide-item{
         padding: 0;
         margin: 0;
@@ -256,7 +282,7 @@
 
         &__image{
             max-width: 382px;
-            margin: 0 auto 30px;
+            margin: 0 auto 32px;
             box-shadow: 0 10px 30px 0 rgba(0,0,0,.1);
         }
         &__title{
@@ -271,3 +297,27 @@
     }
 }
 /*end section-slider*/
+
+/*start section-product*/
+.section-product{
+    background-color: $greyBg;
+    padding: 30px 0;
+
+    h3{
+        text-align: center;
+        margin: 0 0 30px;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        padding:  0 14px;
+    }
+    &__item{
+        width: 100%;
+        background-color: $lightBg;
+        border-radius: 20px;
+        padding: 16px;
+    }
+}
+/*end section-product*/
