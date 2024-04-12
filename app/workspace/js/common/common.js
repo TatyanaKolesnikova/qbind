@@ -80,7 +80,19 @@ $(document).ready(function () {
         var count = $(this).find(".slider-nav ul li").length;
         $(this).find('.slider-count').text('/'+count);
     })
-    Fancybox.bind("[data-fancybox]");
+    Fancybox.bind("[data-fancybox]", {
+        compact: false,
+        on: {
+            loaded: (fancybox, slide) => {
+            var $closeButton = $('<button>').addClass('close-button');
+            $('.fancybox__content').append($closeButton);
+            $closeButton.on('click', function() {
+                Fancybox.close();
+            });
+          },
+        },
+    });
+
 });
 
 $(window).scroll(function() {
