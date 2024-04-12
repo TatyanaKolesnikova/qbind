@@ -13,10 +13,12 @@
         </div>
     </div>
 </section>
-<section class="section-case">
+<section class="section-case s-default">
     <div class="container">
-        <h2>Nos adaptamos a lo que tu <br> negocio necesita</h2>
-        <p>Una solución unificada y flexible para gestionar tus pólizas de <br> forma sencilla, eficiente y focalizada en ofrecer el mejor <br> servicio al cliente</p>
+        <div class="s-default__title">
+            <h2>Nos adaptamos a lo que tu negocio necesita</h2>
+            <p>Una solución unificada y flexible para gestionar tus pólizas de forma sencilla, eficiente y focalizada en ofrecer el mejor servicio al cliente</p>
+        </div>
         <div class="section-case__row">
             <div class="case-item">
                 <div class="case-item__image"><img src="images/img002.webp" alt=""></div>
@@ -44,86 +46,38 @@
         </div>
     </div>
 </section>
-<section class="section-service">
+<section class="section-service s-default">
     <div class="container">
-        <h2>Nos ajustamos a lo que tu negocio necesita</h2>
+        <div class="s-default__title">
+            <h2>Nos ajustamos a lo que tu <br>negocio necesita</h2>
+        </div>
         <div class="service-holder">
-            <div class="service-card">
-                <div class="service-card__icon"><img src="images/ms-ic001.webp" alt=""></div>
-                <div class="service-card__title">Responsabilidad profesional</div>
-            </div>
-            <div class="service-card">
-                <div class="service-card__icon"><img src="images/ms-ic001.webp" alt=""></div>
-                <div class="service-card__title">Responsabilidad profesional</div>
-            </div>
-            <div class="service-card">
-                <div class="service-card__icon"><img src="images/ms-ic001.webp" alt=""></div>
-                <div class="service-card__title">Responsabilidad profesional</div>
-            </div>
-            <div class="service-card">
-                <div class="service-card__icon"><img src="images/ms-ic001.webp" alt=""></div>
-                <div class="service-card__title">Responsabilidad profesional</div>
-            </div>
-            <div class="service-card">
-                <div class="service-card__icon"><img src="images/ms-ic001.webp" alt=""></div>
-                <div class="service-card__title">Responsabilidad profesional</div>
-            </div>
-            <div class="service-card">
-                <div class="service-card__icon"><img src="images/ms-ic001.webp" alt=""></div>
-                <div class="service-card__title">Responsabilidad profesional</div>
-            </div>
-            <div class="service-card">
-                <div class="service-card__icon"><img src="images/ms-ic001.webp" alt=""></div>
-                <div class="service-card__title">Responsabilidad profesional</div>
-            </div>
-            <div class="service-card">
-                <div class="service-card__icon"><img src="images/ms-ic001.webp" alt=""></div>
-                <div class="service-card__title">Responsabilidad profesional</div>
-            </div>
-            <div class="service-card">
-                <div class="service-card__icon"><img src="images/ms-ic001.webp" alt=""></div>
-                <div class="service-card__title">Responsabilidad profesional</div>
-            </div>
-            <div class="service-card">
-                <div class="service-card__icon"><img src="images/ms-ic001.webp" alt=""></div>
-                <div class="service-card__title">Responsabilidad profesional</div>
-            </div>
+            @@include('template/service-item.html', {"title": "Responsabilidad profesional"})
+            @@include('template/service-item.html', {"title": "Accidentes personales"})
+            @@include('template/service-item.html', {"title": "Propiedad"})
+            @@include('template/service-item.html', {"title": "Seguro de vida"})
+            @@include('template/service-item.html', {"title": "Cancelación de eventos"})
+            @@include('template/service-item.html', {"title": "Finanzas"})
+            @@include('template/service-item.html', {"title": "Seguro de enfermedad"})
+            @@include('template/service-item.html', {"title": "Costes legales"})
+            @@include('template/service-item.html', {"title": "Responsabilidad civil"})
+            @@include('template/service-item.html', {"title": "Varios"})
         </div>
     </div>
 </section>
-<section class="section-numeric">
+<section class="section-numeric s-default">
     <div class="container">
-        <h2>Qbind en números</h2>
+        <div class="s-default__title">
+            <h2>Qbind en números</h2>
+        </div>
         <div class="qb-mosaic">
-            <div class="qb-mosaic__item">
-                <div class="qb-mosaic__value">10+</div>
-                <div class="qb-mosaic__desc">Productos diferentes pueden ser gestionados</div>
-            </div>
-            <div class="qb-mosaic__item">
-                <div class="qb-mosaic__value">12+</div>
-                <div class="qb-mosaic__desc">Años operando en el sector asegurador</div>
-            </div>
-            <div class="qb-mosaic__item">
-                <div class="qb-mosaic__value">50m+</div>
-                <div class="qb-mosaic__desc">En primas gestionadas en nuestra plataforma</div>
-            </div>
-            <div class="qb-mosaic__item">
-                <div class="qb-mosaic__value">50k+</div>
-                <div class="qb-mosaic__desc">Pólizas emitidas</div>
-            </div>
-            <div class="qb-mosaic__item">
-                <div class="qb-mosaic__value">8+</div>
-                <div class="qb-mosaic__desc">Funcionalidades diferentes con las que personalizar tu plataforma</div>
-            </div>
-            <div class="qb-mosaic__item">
-                <div class="qb-mosaic__value">4k+</div>
-                <div class="qb-mosaic__desc">Claims 
-                    handled</div>
-            </div>
-            <div class="qb-mosaic__item">
-                <div class="qb-mosaic__value">10+</div>
-                <div class="qb-mosaic__desc">Productos diferentes pueden ser gestionados</div>
-            </div>
+            @@include('template/mosaic-item.html', {"value": "10+", "info": "Productos diferentes pueden ser gestionados"})
+            @@include('template/mosaic-item.html', {"value": "12+", "info": "Años operando en el sector asegurador"})
+            @@include('template/mosaic-item.html', {"value": "50m+", "info": "En primas gestionadas en nuestra plataforma"})
+            @@include('template/mosaic-item.html', {"value": "50k+", "info": "Pólizas emitidas"})
+            @@include('template/mosaic-item.html', {"value": "8+", "info": "Funcionalidades diferentes con las que personalizar tu plataforma"})
+            @@include('template/mosaic-item.html', {"value": "4k+", "info": "Claims handled"})
+            @@include('template/mosaic-item.html', {"value": "10+", "info": "Productos diferentes pueden ser gestionados"})
         </div>
     </div>
 </section>
