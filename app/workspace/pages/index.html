@@ -1,10 +1,10 @@
 @@include('template/header.html')
 
-<section class="section-intro">
+<section class="section-intro s-default">
     <div class="container">
         <div class="section-intro__row">
             <div class="section-intro__media">
-                <img src="images/image-hero.webp" alt="alt">
+                <img src="images/Home-web.webp" alt="alt">
             </div>
             <div class="section-intro__desc">
                 <h1><span class="color">Un software integral</span> con soluciones para agentes, Brokers y agencias de suscripción de seguros</h1>
@@ -12,6 +12,7 @@
             </div>
         </div>
     </div>
+    <a href="#" class="scroll-down"></a>
 </section>
 <section class="section-case s-default">
     <div class="container">
@@ -20,26 +21,26 @@
             <p>Una solución unificada y flexible para gestionar tus pólizas de forma sencilla, eficiente y focalizada en ofrecer el mejor servicio al cliente</p>
         </div>
         <div class="section-case__row">
-            <div class="case-item">
-                <div class="case-item__image"><img src="images/img002.webp" alt=""></div>
-                <strong class="case-item__title">Optimización de cada etapa del negocio</strong>
-                Los miembros de tu equipo podrán controlar y gestionar en tiempo real todos los productos, simplificando la cotización y emisión de pólizas. 
-            </div>
-            <div class="case-item">
-                <div class="case-item__image"><img src="images/img002.webp" alt=""></div>
-                <strong class="case-item__title">Optimización de cada etapa del negocio</strong>
-                Los miembros de tu equipo podrán controlar y gestionar en tiempo real todos los productos, simplificando la cotización y emisión de pólizas. 
-            </div>
-            <div class="case-item">
-                <div class="case-item__image"><img src="images/img002.webp" alt=""></div>
-                <strong class="case-item__title">Optimización de cada etapa del negocio</strong>
-                Los miembros de tu equipo podrán controlar y gestionar en tiempo real todos los productos, simplificando la cotización y emisión de pólizas. 
-            </div>
-            <div class="case-item">
-                <div class="case-item__image"><img src="images/img002.webp" alt=""></div>
-                <strong class="case-item__title">Optimización de cada etapa del negocio</strong>
-                Los miembros de tu equipo podrán controlar y gestionar en tiempo real todos los productos, simplificando la cotización y emisión de pólizas. 
-            </div>
+            @@include('template/case-item.html', {
+                "title": "Optimización de cada etapa del negocio", 
+                "info": "Los miembros de tu equipo podrán controlar y gestionar en tiempo real todos los productos, simplificando la cotización y emisión de pólizas.", 
+                "image": "img002.webp"
+            })
+            @@include('template/case-item.html', {
+                "title": "Conexión entre los canales de distribución ", 
+                "info": "Todos los actores están interconectados en un software único, garantizando una experiencia eficaz y satisfactoria para el cliente final.", 
+                "image": "img002.webp"
+            })
+            @@include('template/case-item.html', {
+                "title": "Control y trazabilidad de todos los procesos", 
+                "info": "Desde el envío de documentación, aprobaciones, comunicaciones hasta la creación de presupuestos y emisión de pólizas. ", 
+                "image": "img002.webp"
+            })
+            @@include('template/case-item.html', {
+                "title": "Rentabilidad para tu negocio con tecnología puntera", 
+                "info": "Nuestra plataforma te ofrece lo que necesitas para conseguir tus resultados sin sacrificar tu presupuesto. ", 
+                "image": "img002.webp"
+            })
         </div>
         <div class="hold-btn">
             <a href="#" class="btn btn-bordered-primary">Ver todas las funcionalidades</a>
@@ -52,16 +53,16 @@
             <h2>Nos ajustamos a lo que tu <br>negocio necesita</h2>
         </div>
         <div class="service-holder">
-            @@include('template/service-item.html', {"title": "Responsabilidad profesional"})
-            @@include('template/service-item.html', {"title": "Accidentes personales"})
-            @@include('template/service-item.html', {"title": "Propiedad"})
-            @@include('template/service-item.html', {"title": "Seguro de vida"})
-            @@include('template/service-item.html', {"title": "Cancelación de eventos"})
-            @@include('template/service-item.html', {"title": "Finanzas"})
-            @@include('template/service-item.html', {"title": "Seguro de enfermedad"})
-            @@include('template/service-item.html', {"title": "Costes legales"})
-            @@include('template/service-item.html', {"title": "Responsabilidad civil"})
-            @@include('template/service-item.html', {"title": "Varios"})
+            @@include('template/service-item.html', {"title": "Responsabilidad profesional","image": "ProfessionalResponsibilityBlue.webp"})
+            @@include('template/service-item.html', {"title": "Accidentes personales","image": "PersonalAccidentsBlue.webp"})
+            @@include('template/service-item.html', {"title": "Propiedad","image": "PropertyBlue.webp"})
+            @@include('template/service-item.html', {"title": "Seguro de vida","image": "LifeInsuranceBlue.webp"})
+            @@include('template/service-item.html', {"title": "Cancelación de eventos","image": "CancellationOfEventsBlue.webp"})
+            @@include('template/service-item.html', {"title": "Finanzas","image": "FinanceBlue.webp"})
+            @@include('template/service-item.html', {"title": "Seguro de enfermedad","image": "HealthInsuranceBlue.webp"})
+            @@include('template/service-item.html', {"title": "Costes legales","image": "LegalCostsBlue.webp"})
+            @@include('template/service-item.html', {"title": "Responsabilidad civil","image": "LiabilityBlue.webp"})
+            @@include('template/service-item.html', {"title": "Varios","image": "OtherBlue.webp"})
         </div>
     </div>
 </section>
@@ -78,6 +79,21 @@
             @@include('template/mosaic-item.html', {"value": "8+", "info": "Funcionalidades diferentes con las que personalizar tu plataforma"})
             @@include('template/mosaic-item.html', {"value": "4k+", "info": "Claims handled"})
             @@include('template/mosaic-item.html', {"value": "10+", "info": "Productos diferentes pueden ser gestionados"})
+        </div>
+    </div>
+</section>
+@@include('template/advert.html', {
+    "title": "Agenda una llamada para ver cómo Qbind puede ayudarte con tu negocio", 
+    "text": ""
+})
+<section class="section-partners s-default">
+    <div class="container">
+        <div class="s-default__title">
+            <h2>Nuestros principales clientes</h2>
+        </div>
+        <div class="qb-partners">
+            @@include('template/partner-item.html', {"image": "partnter-heca.webp"})
+            @@include('template/partner-item.html', {"image": "partner-velvet.webp"})
         </div>
     </div>
 </section>

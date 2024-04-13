@@ -1,9 +1,9 @@
 .s-default {
     padding: 5.3vw 0;
-    text-align: center;
     &__title {
         max-width: 570px;
         margin: 0 auto 30px;
+        text-align: center;
     }
     @media (min-width: 768px) {
         &__title {
@@ -15,7 +15,9 @@
 /*start .section-intro*/
 .section-intro {
     background: $lightBg;
-    padding: 6.8vw 0 13vw;
+    //padding: 6.8vw 0 13vw;
+    position: relative;
+    min-height: calc(100vh - 60px);
     &__row {
        margin: 0 -13px; 
     }
@@ -37,6 +39,7 @@
 }
 @media (min-width: 768px) {
     .section-intro {
+        min-height: calc(100vh - 111px);
         &__row {
             display: flex;
             flex-direction: row-reverse;
@@ -91,7 +94,7 @@
         padding-top: 53%;
         width: 68%;
         position: relative;
-        margin: 0 auto 10px;
+        margin: 0 auto 30px;
         img {
             position: absolute;
             top: 50%;
@@ -264,3 +267,29 @@
     
     
 /*end .section-numeric*/
+
+/*start .qb-partners*/
+.qb-partners {
+    --width: 290px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 596px;
+    margin: 0 auto;
+    &__item {
+        background: $lightBg;
+        border-radius: 16px;
+        padding-top: 86%;
+        position: relative;
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            max-width: 60%;
+            max-height: 60%;
+            object-fit: contain;
+        }
+    }
+}
+/*end .qb-partners*/
