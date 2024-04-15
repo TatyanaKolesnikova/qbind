@@ -18,7 +18,7 @@
 /*start .section-intro*/
 .section-intro {
     background: $lightBg;
-    padding-bottom: 86px;
+    padding: 80px 0;
     position: relative;
     &__row {
        margin: 0 -13px; 
@@ -44,6 +44,8 @@
 }
 @media (min-width: 1024px) {
     .section-intro {
+        padding: 7vw 0;
+        min-height: calc(100vh - 111px);
         &__row {
             display: flex;
             flex-direction: row-reverse;
