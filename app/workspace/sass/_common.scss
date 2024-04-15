@@ -319,6 +319,61 @@ label{
 		color: $primaryActiveBg;
 	}
 }
+.link-btn{
+	font-size: 16px;
+	font-weight: 700;
+	display: inline-block;
+	padding: 0 19px 0 0;
+	color: $blueColor;
+	position: relative;
+	transition: all 0.3s ease;
+
+	&:hover {
+		text-decoration: underline;
+		color: $primaryHoverBg;
+	}
+	&:focus {
+		color: $primaryActiveBg;
+		text-decoration: underline;
+	}
+	&:before{
+		content: '';
+		width: 100%;
+		height: 1px;
+	}
+	.arrow{
+		width: 12px;
+		height: 12px;
+		display: block;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+
+		&:before{
+			content: '';
+			width: 10px;
+			height: 1px;
+			background-color: currentColor;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+		}
+		&:after{
+			content: '';
+			width: 8px;
+			height: 8px;
+			border-right: 1px solid currentColor;
+			border-bottom: 1px solid currentColor;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%) rotate(-45deg);
+		}
+	}
+	
+}
 /* wrapper */
 #wrapper {
 	overflow:hidden;
