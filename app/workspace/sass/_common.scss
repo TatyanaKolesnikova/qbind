@@ -122,125 +122,52 @@ p {
 		height: auto;
 	}
 }
-
-.form-holder {
+.default-input{
 	width: 100%;
-	//margin: 0 0 20px;
+	margin: 0 0 6px;
 }
 input[type="tel"],
 input[type="text"],
 input[type="email"],
 input[type="password"]{
 	width:100%;
-	height:40px;
-	padding:5px 10px 5px;
-	margin:0;
+	height: 45px;
+	padding: 12px;
+	margin:0 0 6px;
 	outline: none;
 	outline: 0;
 	box-sizing: border-box;
-	border: none;
+	border: 1px solid $blueLightColor;
+	border-radius: 8px;
 	box-shadow: none;
 	-webkit-appearance: none;
-	-webkit-transition: color $timeHover ease-in-out;
-	-moz-transition: color $timeHover ease-in-out;
-	-ms-transition: color $timeHover ease-in-out;
-	transition: color $timeHover ease-in-out;
+	transition: all 0.3s ease;
 	position: relative;
 	font-size: $gfs;
 	line-height: $gfs;
-	font-weight: bold;
-	text-align: center;
+	color: $mainColor;
+	font-weight: 400;
+	text-align: left;
 	outline: none;
 	outline: 0;
 	overflow: hidden;
 
 	&:focus {
-
+		border-color: $blueDarkColor;
 	}
 	&::placeholder {
-		color: $mainColor;
+		color: $greyLightColor;
 		opacity: 1; /* Firefox */
 	}
 	&:-ms-input-placeholder { /* Internet Explorer 10-11 */
-		color:$mainColor;
+		color: $greyLightColor;
 	}
 	&::-ms-input-placeholder { /* Microsoft Edge */
-		color: $mainColor;
+		color: $greyLightColor;
 	}
 
-	&.focused {
-		color: $mainColor;
-		background: $mainColor;
-
-		&::placeholder {
-			color: $mainColor;
-			opacity: 1;
-		}
-		&:-ms-input-placeholder {
-			color: $mainColor;
-		}
-		&::-ms-input-placeholder {
-			color: $mainColor;
-		}
-	}
-	&.filled {
-		color:$mainColor ;
-
-		&::placeholder {
-			color: $mainColor;
-			opacity: 1;
-		}
-		&:-ms-input-placeholder {
-			color:$mainColor ;
-		}
-		&::-ms-input-placeholder {
-			color: $mainColor;
-		}
-	}
-	&.valid {
-		color:$mainColor ;
-		background:$mainColor;
-
-		&::placeholder {
-			color: $mainColor;
-			opacity: 1;
-		}
-		&:-ms-input-placeholder {
-			color: $mainColor;
-		}
-		&::-ms-input-placeholder {
-			color: $mainColor;
-		}
-	}
-	&.novalid {
-		color: $mainColor;
-		background: $mainColor;
-
-		&::placeholder {
-			color: $mainColor;
-			opacity: 1;
-		}
-		&:-ms-input-placeholder {
-			color:  $mainColor;
-		}
-		&::-ms-input-placeholder {
-			color:  $mainColor;
-		}
-	}
-	&.readonly {
-		color: $mainColor;
-		background: $mainColor;
-
-		&::placeholder {
-			color: $mainColor;
-			opacity: 1;
-		}
-		&:-ms-input-placeholder {
-			color: $mainColor;
-		}
-		&::-ms-input-placeholder {
-			color: $mainColor;
-		}
+	.error &{
+		border-color: $redColor;
 	}
 }
 
@@ -252,19 +179,37 @@ form {
 	textarea {
 		overflow: auto;
 		vertical-align: top;
-		border-radius:6px;
-		border: 1px dashed #dcdcdc;
+		border-radius: 8px;
+		border: 1px solid $blueLightColor;
 		width:100%;
-		padding:20px;
-		margin:0 0 7px;
+		padding: 12px;
+		margin:0 0 6px;
 		outline: none;
 		outline: 0;
-		min-height: 160px ;
+		min-height: 172px;
 		max-width: 100% !important;
 		box-sizing: border-box;
 		box-shadow: none;
-		font-weight: 600;
+		font-weight: 400;
 		-webkit-appearance: none;
+		transition: all 0.3s ease;
+
+		&:focus {
+			border-color: $blueDarkColor;
+		}
+		&::placeholder {
+			color: $greyLightColor;
+		}
+		&:-ms-input-placeholder {
+			color: $greyLightColor;
+		}
+		&::-ms-input-placeholder {
+			color: $greyLightColor;
+		}
+
+		.error &{
+			border-color: $redColor;
+		}
 	}
 
 
@@ -293,23 +238,27 @@ form {
 		background: $mainColor!important;
 		border: none !important;
 	}
+}
+.error-message{
+	display: none;
+	font-size: 12px;
+	color: $redColor;
+	padding: 6px 0 6px 20px;
+	position: relative;
+	background: url(../images/icon-error.webp) no-repeat 0 6px;
+	background-size: 15px 13px;
 
-	input:valid {
-
+	.error &{
+		display: block;
 	}
 }
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-	-webkit-text-fill-color: $mainColor;
-	-webkit-box-shadow: 0 0 0 1000px #fbfcfb inset;
-	transition: background-color 5000s ease-in-out 0s;
+label{
+	display: block;
+	font-size: 14px;
+	line-height: 1.43;
+	color: $greyDarkColor;
+	padding: 0 5px;
+	margin: 0 0 5px;
 }
 .btn {
 	display: inline-block;
