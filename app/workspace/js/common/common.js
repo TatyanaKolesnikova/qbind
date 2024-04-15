@@ -1,4 +1,11 @@
 $(document).ready(function () {
+    $(document).on('click' , '.scroll-down' , function(e){
+        var height = $(this).parent().outerHeight();
+        $('body,html').animate({
+            scrollTop: height
+        }, 800);
+        return false;
+    });
     $(document).on('click', '.toogle-menu', function(e){
         $("body").toggleClass("open-nav");
         return false;
