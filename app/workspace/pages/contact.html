@@ -1,5 +1,41 @@
 
 @@include('template/header.html')
 
+<section class="section-contact s-default">
+    <div class="container">
+        <div class="section-contact__hold">
+            <div class="section-contact__info">
+                <div class="section-contact__image">
+                    <img src="#" alt="contact" width="387" height="267">
+                </div>
+                <h2>Desde QBind te ayudamos a <span class="color">potenciar tu negocio</span></h2>
+                <p>Agenda tu llamada para ver cómo funcionan las diferentes funcionalidades del software para seguros y resolver cualquier duda. 
+                </p>
+            </div>
+            <div class="section-contact__form">
+                <p>Dejanos tus datos y en breve te contactaremos para coordinar un día y horario de reunión</p>
+                <form action="post">
+                    <div class="default-input"><!--add class .error-->
+                        <input type="text" placeholder="Nombre">
+                        <span class="error-message">error</span>
+                    </div>
+                    <div class="default-input"><!--add class .error-->
+                        <input type="text" placeholder="Nombre de la empresa">
+                        <span class="error-message">error</span>
+                    </div>
+                    <div class="default-input"><!--add class .error-->
+                        <input type="email" placeholder="Mail">
+                        <span class="error-message">error</span>
+                    </div>
+                    <div class="default-textarea"><!--add class .error-->
+                        <textarea placeholder="Cuéntanos sobre qué quieres hablar"></textarea>
+                        <span class="error-message">error</span>
+                    </div>
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
 @@include('template/footer.html')
