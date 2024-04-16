@@ -1023,7 +1023,7 @@
         margin: 0 auto 20px;
 
         img{
-            @include imgAbsolute(100%, 100%);
+            @include imgAbsolute(100%, 100%, cover);
         }
     }
     @media (min-width: 768px) {
