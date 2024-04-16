@@ -46,12 +46,12 @@ $timeHover: 0.25s;
 
 $boxshadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
 
-@mixin imgAbsolute($width, $height){
+@mixin imgAbsolute($width, $height, $fit){
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: $width;
     height: $height;
-    object-fit: contain;
+    object-fit: $fit;
 }
