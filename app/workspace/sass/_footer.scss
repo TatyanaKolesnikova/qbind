@@ -130,9 +130,11 @@
         li{
             margin: 0 0 10px ;
 
-            a{
+            a,
+            span{
                 display: inline;
                 font-weight: 500;
+                cursor: pointer;
             }
             &:last-child{
                 margin: 0;
