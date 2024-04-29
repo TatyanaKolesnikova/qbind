@@ -231,7 +231,7 @@
     }
     .menu{
         flex-direction: row;
-        margin: 0 20px 0 0;
+        margin: 0 10px 0 0;
 
         li{
             padding: 0 10px;
@@ -331,8 +331,5 @@
 @media (min-width: 1024px){
     .hold-lang{
         margin: 0 0 0 40px;
-    }
-    .menu{
-        margin: 0 40px 0 0;
     }
 }
