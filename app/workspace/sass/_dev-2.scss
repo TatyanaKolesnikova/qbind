@@ -134,19 +134,26 @@
             width: auto;
             height: auto;
             position: absolute;
-            top: 15px;
-            left: 15px;
-            right: 15px;
-            bottom: 15px;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
             z-index: 1;
-            box-shadow: 0px 80px 45px 0px rgba(0, 0, 0, 0.09);
-        }
+            box-shadow: 
+                0px 2.77px 2.21px 0px rgba(0, 0, 0, 0.0197),
+                0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.0283),
+                0px 12.52px 10.02px 0px rgba(0, 0, 0, 0.035),
+                0px 22.34px 17.87px 0px rgba(0, 0, 0, 0.0417),
+                0px 41.78px 33.42px 0px rgba(0, 0, 0, 0.0503),
+                0px 100px 80px 0px rgba(0, 0, 0, 0.07);
+            }
 
         img{
             position: relative;
             z-index: 2;
             @include imgAbsolute(100%, 100%, cover);
-            border-radius: 5px;
+            border-radius: 10px;
+            overflow: hidden;
         }
     }
     &__title{
@@ -265,10 +272,18 @@
         .slick-list{
             padding: 0 !important;
             width: 50%;
+            overflow: visible;
         }
         .slick-slide{
+            display: none;
+            opacity: 1 !important;
+            left: 0 !important;
+
             >div{
                 width: 100%;
+            }
+            &.slick-active{
+                display: block;
             }
         }
         .slick-dots{
@@ -596,6 +611,7 @@
     &__media{
         width: 240px;
         height: 211px;
+        padding: 10px;
         background-color: $whiteBg;
         margin: 0 auto -35px;
         border-radius: 10px;
@@ -606,7 +622,7 @@
             display: block;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
 
     }
@@ -638,6 +654,7 @@
             border-radius: 13px;
             margin: 0 0 -75px;
             align-self: flex-end;
+            padding: 39px 27px;
         }
     }
 }
@@ -669,21 +686,18 @@
     }
     &__image{
         width: 302px;
-        height: 168px;
-        padding: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 auto 27px;
         border-radius: 15px;
         background-color: $lightBg;
-        box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.035);
 
         img{
             display: block;
-            width: auto;
+            width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
 
     }
@@ -719,7 +733,7 @@
         }
         &__image{
             width: 100%;
-            height: 419px;
+            border-radius: 26px;
         }
     }
 }
@@ -1027,15 +1041,15 @@
     }
     &__image{
         width: 100%;
-        padding-top: 70%;
+        padding-top: 45%;
         border-radius: 15px;
-        background-color: $primaryBg;
         overflow: hidden;
         position: relative;
         margin: 0 auto 20px;
+        max-width: 266px;
 
         img{
-            @include imgAbsolute(100%, 100%, cover);
+            @include imgAbsolute(100%, 100%, contain);
         }
     }
     @media (min-width: 768px) {

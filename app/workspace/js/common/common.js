@@ -30,6 +30,8 @@ $(document).ready(function () {
         $(this).find('.slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
+            fade: true,
+            cssEase: 'linear',
             dots: true,
             customPaging: function(slider, i) {
                 return dots.eq(i);
@@ -42,6 +44,7 @@ $(document).ready(function () {
                 {
                     breakpoint: 1024,
                     settings: {
+                        fade: false,
                         slidesToShow: 3,
                         infinite: true,
                         centerMode: true,
@@ -56,6 +59,7 @@ $(document).ready(function () {
                 {
                 breakpoint: 768,
                     settings: {
+                        fade: false,
                         slidesToShow: 2,
                         infinite: true,
                         centerMode: true,
@@ -70,6 +74,7 @@ $(document).ready(function () {
                 {
                 breakpoint: 480,
                     settings: {
+                        fade: false,
                         slidesToShow: 1,
                         infinite: true,
                         centerMode: true,

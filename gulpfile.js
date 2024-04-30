@@ -357,7 +357,7 @@ function watcher() {
 
 	gulp.watch(path.src.sass, styles);
 
-	gulp.watch(path.src.img, /*images,*/ webpImg);
+	gulp.watch(path.src.img, images, webpImg);
 
 	gulp.watch([path.src.jsLibs, path.src.common], js);
 
@@ -369,4 +369,4 @@ exports.watcher = watcher;
 //
 // Default
 //
-exports.default = gulp.series(cleanAll, gulp.parallel(standardRemove, html), /*images,*/ webpImg, js, styles, gulp.parallel(server, watcher));
+exports.default = gulp.series(cleanAll, gulp.parallel(standardRemove, html), images, webpImg, js, styles, gulp.parallel(server, watcher));
