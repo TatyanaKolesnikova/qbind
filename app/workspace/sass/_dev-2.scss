@@ -677,21 +677,64 @@
 /*end section-advert*/
 /*start section-entry*/
 .section-entry{
-    padding:  89px 0 44px;
+    padding:  60px 0 44px;
+    position: relative;
+    &__bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 272px;
+        z-index: 1;
+
+        &:before{
+            content: '';
+            width: 223px;
+            height: 195px;
+            background: url('../images/bg-green.svg') no-repeat 0 0;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+        &:after{
+            content: '';
+            width: 278px;
+            height: 231px;
+            background: url('../images/bg-blue.svg') no-repeat 0 0;
+            background-size: contain;
+            position: absolute;
+            bottom: -94px;
+            right: -48px;
+            z-index: 2;
+        }
+        .element-bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 272px;
+            background-color: #E7EFFF;
+            filter: blur(43px);
+            z-index: 1;
+        }
+    }
 
     .container{
         max-width: 990px;
         display: flex;
         flex-direction: column;
+        position: relative;
+        z-index: 3;
     }
     &__image{
-        width: 302px;
+        max-width: 302px;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 auto 27px;
-        border-radius: 15px;
-        background-color: $lightBg;
+        margin: 0 auto 26px;
 
         img{
             display: block;
@@ -719,7 +762,23 @@
 @media (min-width: 768px){
     .section-entry{
         padding:  90px 0;
-
+        &__bg{
+            height: 100%;
+            &:before{
+                width: 858px;
+                height: 613px;
+            }
+            &:after{
+                width: 970px;
+                height: 806px;
+                bottom: -360px;
+                right: 0;
+            }
+            .element-bg{
+                height: 100%;
+                filter: blur(122px);
+            }
+        }
         .container{
             flex-direction: column-reverse;
         }
@@ -729,11 +788,12 @@
         }
         h1{
             text-align: center;
-            margin: 0 0 60px;
+            margin: 0 0 20px;
         }
         &__image{
             width: 100%;
-            border-radius: 26px;
+            max-width: 837px;
+            margin: 0 auto 20px;
         }
     }
 }
@@ -741,6 +801,8 @@
 /*start section-advantages*/
 .section-advantages{
     padding: 40px 0;
+    position: relative;
+    z-index: 3;
 
     h2{
         text-align: center;
@@ -789,7 +851,8 @@
 }
 @media (min-width: 768px){
     .section-advantages{
-        padding: 50px 0;
+        padding: 0 0 50px;
+        
 
         &__list{
             margin: 0 auto 75px;
