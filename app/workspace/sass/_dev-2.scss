@@ -764,6 +764,7 @@
         padding:  90px 0;
         &__bg{
             height: 100%;
+
             &:before{
                 width: 858px;
                 height: 613px;
@@ -1115,10 +1116,29 @@
             @include imgAbsolute(100%, 100%, contain);
         }
     }
+    &__image-inner{
+        border-radius: 26px;
+        max-width: 240px;
+        padding: 0;
+        border-radius: 15px;
+        overflow: hidden;
+
+        img{
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0,0);
+        }
+    }
+    
     @media (min-width: 768px) {
         &__image {
             border-radius: 20px;
             margin: 0 0 30px;
+        }
+        &__image-inner{
+            border-radius: 26px;
+            max-width: 388px;
         }
         &__hold {
             flex-direction: row;
