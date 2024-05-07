@@ -172,49 +172,47 @@ input[type="password"]{
         border-color: $redColor;
     }
 }
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    border-radius: 8px;
+    border: 1px solid $blueLightColor;
+    width:100%;
+    padding: 12px;
+    margin:0 0 6px;
+    outline: none;
+    outline: 0;
+    min-height: 172px;
+    max-width: 100% !important;
+    min-width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    font-weight: 400;
+    -webkit-appearance: none;
+    transition: all 0.3s ease;
+
+    &:focus {
+        border-color: $blueDarkColor;
+    }
+    &::placeholder {
+        color: $greyLightColor;
+    }
+    &:-ms-input-placeholder {
+        color: $greyLightColor;
+    }
+    &::-ms-input-placeholder {
+        color: $greyLightColor;
+    }
+
+    .error &{
+        border-color: $redColor;
+    }
+}
 
 form {
     position:relative;
     margin:0;
     width:100%;
-
-    textarea {
-        overflow: auto;
-        vertical-align: top;
-        border-radius: 8px;
-        border: 1px solid $blueLightColor;
-        width:100%;
-        padding: 12px;
-        margin:0 0 6px;
-        outline: none;
-        outline: 0;
-        min-height: 172px;
-        max-width: 100% !important;
-        min-width: 100%;
-        box-sizing: border-box;
-        box-shadow: none;
-        font-weight: 400;
-        -webkit-appearance: none;
-        transition: all 0.3s ease;
-
-        &:focus {
-            border-color: $blueDarkColor;
-        }
-        &::placeholder {
-            color: $greyLightColor;
-        }
-        &:-ms-input-placeholder {
-            color: $greyLightColor;
-        }
-        &::-ms-input-placeholder {
-            color: $greyLightColor;
-        }
-
-        .error &{
-            border-color: $redColor;
-        }
-    }
-
 
     input[type="button"],
     button {
