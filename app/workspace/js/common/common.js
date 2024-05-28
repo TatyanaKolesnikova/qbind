@@ -1,6 +1,6 @@
 $(document).ready(function () {
     langAttr();
-    setLanguage('en');
+    
     
     $(document).on('click' , '.scroll-down' , function(e){
         var height = $(this).parent().outerHeight();
@@ -143,5 +143,6 @@ function langAttr() {
     elements.each(function() {
         var text = $(this).text();
         $(this).attr('data-translate', text);
-    })
+    });
+    setLanguage('en');
 }
