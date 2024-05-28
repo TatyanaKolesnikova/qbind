@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    
+    setLanguage('en');
     $(document).on('click' , '.scroll-down' , function(e){
         var height = $(this).parent().outerHeight();
         $('body,html').animate({
@@ -15,14 +17,18 @@ $(document).ready(function () {
         e.preventDefault();
         $(this).parents('.hold-lang').toggleClass("open-menu");
     });
-    $(document).on('click', '.list-lang a', function(e){
+    $(document).on('click', '.list-lang a', function(e) {
         e.stopPropagation();
         e.preventDefault();
+        var selectedLang = $(this).attr('data-lang');
+        console.log(selectedLang);
         $('.item-lang').text($(this).text());
-        $('.item-lang').attr('data-lang', $(this).attr('data-lang'));
+        $('.item-lang').attr('data-lang', selectedLang);
         $('.list-lang a').removeClass('active');
         $(this).addClass('active');
         $(this).parents('.hold-lang').removeClass("open-menu");
+    
+        setLanguage(selectedLang);
     });
 
     $('.slider-hold').each(function () {
@@ -115,3 +121,28 @@ $(window).scroll(function() {
         $('#header').removeClass("sticky");
     }
 });
+
+
+const translations = {
+    en: {
+        "Solutions": "Solutions",
+    },
+    es: {
+        "Solutions": "Soluciones",
+    }
+};
+function setLanguage(language) {
+    const elements = $('h1, p, span, div, nav, ul, li, a');
+    elements.each(function() {
+        const text = $(this).text().trim();
+        if (translations[language][text]) {
+            $(this).text(translations[language][text]);
+        }
+    });
+}
+function langAttr() {
+    const elements = $('h1, p, span, div, nav, ul, li, a');
+    elements.each(function() {
+        
+    })
+}
