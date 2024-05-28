@@ -1,6 +1,7 @@
 $(document).ready(function () {
-    
+    langAttr();
     setLanguage('en');
+    
     $(document).on('click' , '.scroll-down' , function(e){
         var height = $(this).parent().outerHeight();
         $('body,html').animate({
@@ -123,26 +124,24 @@ $(window).scroll(function() {
 });
 
 
-const translations = {
-    en: {
-        "Solutions": "Solutions",
-    },
-    es: {
-        "Solutions": "Soluciones",
-    }
-};
+
 function setLanguage(language) {
-    const elements = $('h1, p, span, div, nav, ul, li, a');
+    const elements = $('[data-translate]');
     elements.each(function() {
-        const text = $(this).text().trim();
-        if (translations[language][text]) {
-            $(this).text(translations[language][text]);
+        const text = $(this).attr('data-translate').trim();
+        if(language == 'es'){
+            $(this).text($(this).attr('data-translate'));
+        }else{
+            if (translations[language][text]) {
+                $(this).text(translations[language][text]);
+            }
         }
     });
 }
 function langAttr() {
-    const elements = $('h1, p, span, div, nav, ul, li, a');
+    var elements = $('[data-translate]');
     elements.each(function() {
-        
+        var text = $(this).text();
+        $(this).attr('data-translate', text);
     })
 }
